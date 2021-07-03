@@ -158,6 +158,18 @@
       "languageVersion": "1.23"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "flutter_rating_bar",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_rating_bar-3.2.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
       "name": "flutter_spinkit",
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_spinkit-4.1.2+1",
       "packageUri": "lib/",
@@ -180,6 +192,36 @@
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "geolocator",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/geolocator-6.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "geolocator_platform_interface",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/geolocator_platform_interface-1.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "geolocator_web",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/geolocator_web-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
+    },
+    {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/google_maps_flutter-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
     },
     {
       "name": "google_sign_in",
@@ -248,6 +290,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "path",
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
@@ -270,6 +318,12 @@
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/provider-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "quiver",
@@ -314,6 +368,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "stream_transform",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/stream_transform-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "string_scanner",
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/string_scanner-1.1.0-nullsafety.1",
       "packageUri": "lib/",
@@ -344,6 +404,42 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "url_launcher",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher-5.7.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_linux",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher_linux-0.0.1+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_macos",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+9",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_web",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher_web-0.1.5+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
+      "name": "url_launcher_windows",
+      "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/url_launcher_windows-0.0.1+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Users/Jaskirat%20Singh/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/vector_math-2.1.0-nullsafety.3",
       "packageUri": "lib/",
@@ -368,7 +464,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-06-29T15:36:06.438684Z",
+  "generated": "2021-06-30T16:55:26.141171Z",
   "generator": "pub",
   "generatorVersion": "2.10.2"
 }

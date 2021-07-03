@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -25,9 +32,14 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaskirat Singh\AndroidStudioProjects\minor_project\assets\images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -49,29 +61,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom" timestamp="1624983555366">
+    <state x="92" y="92" width="1182" height="544" key="AVDManager" timestamp="1625039098692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624983555366" />
-    <state width="1323" height="547" key="GridCell.Tab.0.center" timestamp="1624983555366">
+    <state x="92" y="92" width="1182" height="544" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1625039098692" />
+    <state width="1323" height="545" key="GridCell.Tab.0.bottom" timestamp="1625072534236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624983555366" />
-    <state width="1323" height="547" key="GridCell.Tab.0.left" timestamp="1624983555366">
+    <state width="1323" height="545" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625072534236" />
+    <state width="1323" height="545" key="GridCell.Tab.0.center" timestamp="1625072534236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624983555366" />
-    <state width="1323" height="547" key="GridCell.Tab.0.right" timestamp="1624983555366">
+    <state width="1323" height="545" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625072534236" />
+    <state width="1323" height="545" key="GridCell.Tab.0.left" timestamp="1625072534236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624983555366" />
+    <state width="1323" height="545" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625072534236" />
+    <state width="1323" height="545" key="GridCell.Tab.0.right" timestamp="1625072534236">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="545" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625072534236" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1624971582431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624971582431" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1624983114121">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1625054944769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1624983114121" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1625054944769" />
   </component>
 </project>

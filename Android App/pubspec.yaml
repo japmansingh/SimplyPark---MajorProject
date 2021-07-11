@@ -39,14 +39,15 @@ dependencies:
   flutter_launcher_icons : ^0.8.1
   flutter_masked_text: ^0.8.0
   font_awesome_flutter: ^8.10.0
-  razorpay_flutter:
+  razorpay_flutter: ^1.2.7
   toast:
   google_maps_flutter:
   geolocator:
   provider:
   url_launcher:
   flutter_rating_bar:
-
+  xml:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:

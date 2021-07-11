@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:minor_project/Models/user.dart';
 import 'package:minor_project/Pages/payment.dart';
@@ -34,7 +35,7 @@ class _LogTileState extends State<LogTile> {
   void initState() {
     super.initState();
 
-    razorpay = new Razorpay();
+    razorpay = Razorpay();
 
     razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlerPaymentSuccess);
     razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlerErrorFailure);
@@ -43,49 +44,48 @@ class _LogTileState extends State<LogTile> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
-    razorpay.clear();
+    // razorpay.clear();
   }
 
-  void handlerPaymentSuccess(){
+  void handlerPaymentSuccess() {
     print("Pament success");
+    FirebaseFirestore.instance
+        .collection('logs')
+        .doc(user.id)
+        .collection("logs")
+        .doc('Q12w' + widget.numberPlate)
+        .update({'paid': 'paid'});
     Toast.show("Pament success", context);
   }
 
-  void handlerErrorFailure(){
+  void handlerErrorFailure() {
     print("Pament error");
     Toast.show("Pament error", context);
   }
 
-  void handlerExternalWallet(){
+  void handlerExternalWallet() {
     print("External Wallet");
     Toast.show("External Wallet", context);
   }
 
-  void openPaymentGateway(){
+  void openPaymentGateway(double amountCharge) {
     var options = {
-      "key" : "rzp_test_blz8Zlo4PPZtB3",
-      "amount" : 500,
-      "name" : "Complete Your Payment",
-      "description" : "${widget.numberPlate}, ${widget.place}",
-      "prefill" : {
-        "contact" : "8860037713",
-        "email" : "${user.email}"
-      },
-      "external" : {
-        "wallets" : ["paytm"]
+      "key": "rzp_test_blz8Zlo4PPZtB3",
+      "amount": amountCharge * 100,
+      "name": "Complete Your Parking Payment",
+      "description": "${widget.numberPlate}, ${widget.place}",
+      "prefill": {"contact": "8860037713", "email": "${user.email}"},
+      "external": {
+        "wallets": ["paytm"]
       }
     };
 
-    try{
+    try {
       razorpay.open(options);
-
-    }catch(e){
+    } catch (e) {
       print(e.toString());
     }
-
-
   }
 
   @override
@@ -113,16 +113,22 @@ class _LogTileState extends State<LogTile> {
     }
     return GestureDetector(
       onTap: () {
-        // if (_notParked && widget.paid == "" && widget.paid.isEmpty) {
-        //   Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //           builder: (context) => CreditCardPage(
-        //                 amountCharge: calChg,
-        //                 numberPlate: widget.numberPlate,
-        //               )));
-        // }
-        openPaymentGateway();
+        if (_notParked && widget.paid == "" && widget.paid.isEmpty) {
+          FirebaseFirestore.instance
+              .collection('logs')
+              .doc(user.id)
+              .collection("logs")
+              .doc('Q12w' + widget.numberPlate)
+              .update({'paid': 'paid'});
+          openPaymentGateway(calChg);
+          // Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //         builder: (context) => CreditCardPage(
+          //               amountCharge: calChg,
+          //               numberPlate: widget.numberPlate,
+          //             )));
+        }
       },
       child: Padding(
         padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 20.0),

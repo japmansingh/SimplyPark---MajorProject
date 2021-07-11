@@ -412,21 +412,22 @@ class _LoginState extends State<Login> {
     double height = MediaQuery.of(context).size.height;
     return WillPopScope(
       onWillPop: () async => showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-                  title: Text('Are you sure you want to quit?'),
-                  actions: <Widget>[
-                    FlatButton(
-                        child: Text(
-                          'Yes',
-                          style: TextStyle(color: Colors.red),
-                        ),
-                        onPressed: () => Navigator.of(context).pop(true)),
-                    FlatButton(
-                        child: Text('No',
-                            style: TextStyle(color: Color(0XFF003051))),
-                        onPressed: () => Navigator.of(context).pop(false)),
-                  ])),
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Are you sure you want to quit?'),
+          actions: <Widget>[
+            FlatButton(
+                child: Text(
+                  'Yes',
+                  style: TextStyle(color: Colors.red),
+                ),
+                onPressed: () => Navigator.of(context).pop(true)),
+            FlatButton(
+                child: Text('No', style: TextStyle(color: Color(0XFF003051))),
+                onPressed: () => Navigator.of(context).pop(false)),
+          ],
+        ),
+      ),
       child: isAuth
           ? homeScreen()
           :

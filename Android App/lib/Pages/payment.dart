@@ -243,7 +243,7 @@ class _CreditCardPageState extends State<CreditCardPage> {
     _context = context;
     cardBloc = CreditCardBloc();
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Color(0XFF003051),
         centerTitle: true,

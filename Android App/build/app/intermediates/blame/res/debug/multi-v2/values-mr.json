@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\japne\\IdeaProjects\\MajorProject\\Android App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\japne\\.gradle\\caches\\transforms-2\\files-2.1\\ccc8cb473bd74a3ceed747575502cf99\\jetified-play-services-basement-17.0.0\\res\\values-mr\\values.xml",
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\ecb60e8a3908ffe441ec9abd450e145c\\jetified-play-services-basement-17.0.0\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\japne\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\japne\\.gradle\\caches\\transforms-2\\files-2.1\\12b2a981af48a4d34665a895e1a50203\\play-services-base-17.1.0\\res\\values-mr\\values.xml",
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\12b2a981af48a4d34665a895e1a50203\\play-services-base-17.1.0\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

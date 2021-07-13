@@ -5,14 +5,15 @@ import 'package:minor_project/Pages/payment.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:toast/toast.dart';
 import 'package:minor_project/Pages/AuthenticationPage.dart';
+import 'package:uuid/uuid.dart';
 
 class LogTile extends StatefulWidget {
   LogTile(
       {this.numberPlate,
-      this.place,
-      this.exitTimestamp,
-      this.entryTimestamp,
-      this.paid});
+        this.place,
+        this.exitTimestamp,
+        this.entryTimestamp,
+        this.paid});
 
   final String numberPlate;
   final String place;
@@ -25,16 +26,18 @@ class LogTile extends StatefulWidget {
 }
 
 class _LogTileState extends State<LogTile> {
-  int _payRate = 30;
+  double _payRate = 30;
+  double basePay = 50;
   double calChg = 0;
   bool _notParked = true;
   Razorpay razorpay;
   User us = new User();
+  String parkingPlace = "";
 
   @override
   void initState() {
     super.initState();
-
+    getPayRates();
     razorpay = Razorpay();
 
     razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlerPaymentSuccess);
@@ -42,10 +45,41 @@ class _LogTileState extends State<LogTile> {
     razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handlerExternalWallet);
   }
 
+  getPayRates() async {
+    await FirebaseFirestore.instance
+        .collection('logs')
+        .doc(user.id)
+        .collection("logs")
+        .doc('Q12w' + widget.numberPlate)
+        .get()
+        .then((documentSnapshot) {
+      Map plateData = documentSnapshot.data();
+      print(plateData['place']);
+      parkingPlace = plateData['place'];
+    });
+
+    await FirebaseFirestore.instance
+        .collection('admin_panel')
+        .doc(parkingPlace)
+        .get()
+        .then((documentSnapshot) {
+      Map adminData = documentSnapshot.data();
+      if (adminData != null) {
+        print("68");
+        print(adminData);
+        print(adminData['Base_Pay']);
+        print(adminData['Cost_per_Hour']);
+        basePay = double.parse(adminData['Base_Pay']);
+        _payRate = double.parse(adminData['Cost_per_Hour']);
+        setState(() {});
+      }
+    });
+  }
+
   @override
   void dispose() {
     super.dispose();
-    // razorpay.clear();
+    razorpay.clear();
   }
 
   void handlerPaymentSuccess() {
@@ -102,8 +136,10 @@ class _LogTileState extends State<LogTile> {
       exit = widget.exitTimestamp;
       exitHr = int.parse(exit.substring(11, 13));
       exitMn = int.parse(exit.substring(14, 16));
-      calChg = (exitHr - entryHr) * _payRate +
-          ((exitMn - entryMn) * (_payRate / 60));
+      calChg = double.parse(((exitHr - entryHr) * _payRate +
+          ((exitMn - entryMn) * (_payRate / 60)) +
+          basePay)
+          .toStringAsFixed(2));
       print("Charge : $calChg");
       _notParked = true;
     } catch (e) {
@@ -112,15 +148,77 @@ class _LogTileState extends State<LogTile> {
       _notParked = false;
     }
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
         if (_notParked && widget.paid == "" && widget.paid.isEmpty) {
-          FirebaseFirestore.instance
+          String parkingPlace = '';
+          Map logAdminData = {};
+          String messageId = Uuid().v4();
+
+          final logMobileData = FirebaseFirestore.instance
               .collection('logs')
               .doc(user.id)
               .collection("logs")
-              .doc('Q12w' + widget.numberPlate)
-              .update({'paid': 'paid'});
-          openPaymentGateway(calChg);
+              .doc('Q12w' + widget.numberPlate);
+
+          await logMobileData.update({'paid': 'paid'});
+
+          await logMobileData.get().then((documentSnapshot) {
+            logAdminData = documentSnapshot.data();
+            print(logAdminData['place']);
+            parkingPlace = logAdminData['place'];
+          });
+
+          await FirebaseFirestore.instance
+              .collection('logs')
+              .doc(user.id)
+              .collection(widget.numberPlate)
+              .doc(messageId)
+              .set(logAdminData)
+              .whenComplete(() => print("Log is created in mobile"));
+
+          final adminMaterial = FirebaseFirestore.instance
+              .collection('admin_panel')
+              .doc(parkingPlace)
+              .collection("parking")
+              .doc('Park' + widget.numberPlate);
+
+          await adminMaterial.update({'paid': 'paid'});
+
+          await FirebaseFirestore.instance
+              .collection('admin_panel')
+              .doc(parkingPlace)
+              .collection('history')
+              .doc(messageId)
+              .set(logAdminData)
+              .whenComplete(() {
+            print("Log is created in Admin");
+          });
+
+          final updateAdminData = FirebaseFirestore.instance
+              .collection('admin_panel')
+              .doc(parkingPlace);
+
+          await updateAdminData.get().then((documentSnapshot) {
+            Map adminData = documentSnapshot.data();
+            adminData.forEach((key, value) async {
+              if (key == "Available_Space" && value != "0")
+                await updateAdminData
+                    .update({'Available_Space': '${int.parse(value) + 1}'});
+              if (key == "Total_Cars_Parked" && value != "0")
+                await updateAdminData
+                    .update({'Total_Cars_Parked': '${int.parse(value) - 1}'});
+            });
+          }).whenComplete(() {
+            print("Updated Admin data");
+            openPaymentGateway(calChg);
+          });
+
+          // adminMaterial.get().then((documentSnapshot) {
+          //   Map logData = documentSnapshot.data();
+          //   print(logData);
+          //
+          // });
+
           // Navigator.push(
           //     context,
           //     MaterialPageRoute(
@@ -172,7 +270,7 @@ class _LogTileState extends State<LogTile> {
                             width: MediaQuery.of(context).size.width / 5,
                             decoration: BoxDecoration(
                                 color: (widget.paid.isNotEmpty &&
-                                        widget.paid != "")
+                                    widget.paid != "")
                                     ? Colors.green
                                     : Colors.redAccent,
                                 borderRadius: BorderRadius.circular(20)),
@@ -191,21 +289,21 @@ class _LogTileState extends State<LogTile> {
                       ),
                       _notParked
                           ? Row(
-                              children: [
-                                Text(
-                                  '₹',
-                                  style: TextStyle(color: Colors.green),
-                                ),
-                                Text(
-                                  "$calChg",
-                                  style: TextStyle(color: Colors.green),
-                                )
-                              ],
-                            )
+                        children: [
+                          Text(
+                            '₹',
+                            style: TextStyle(color: Colors.green),
+                          ),
+                          Text(
+                            "$calChg",
+                            style: TextStyle(color: Colors.green),
+                          )
+                        ],
+                      )
                           : Container(
-                              height: 0.0,
-                              width: 0.0,
-                            ),
+                        height: 0.0,
+                        width: 0.0,
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -290,55 +388,55 @@ class _LogTileState extends State<LogTile> {
                   ),
                   _notParked
                       ? Padding(
-                          padding: const EdgeInsets.only(left: 5.0),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width / 1.2,
-                            child: Text(
-                              "Date: ${exit?.substring(0, 10)}    Time: ${exit?.substring(11, 19)}",
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              maxLines: 1,
-                              softWrap: false,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        )
-                      : Padding(
-                          padding: const EdgeInsets.only(left: 5.0),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width / 1.2,
-                            child: Text(
-                              exit,
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.green.shade800,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              maxLines: 1,
-                              softWrap: false,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
+                    padding: const EdgeInsets.only(left: 5.0),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.2,
+                      child: Text(
+                        "Date: ${exit?.substring(0, 10)}    Time: ${exit?.substring(11, 19)}",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
                         ),
+                        maxLines: 1,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  )
+                      : Padding(
+                    padding: const EdgeInsets.only(left: 5.0),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.2,
+                      child: Text(
+                        exit,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.green.shade800,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        maxLines: 1,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
                   _notParked
                       ? Padding(
-                          padding: const EdgeInsets.only(left: 5.0),
-                          child: Text(
-                            "Parked for: ${exitHr - entryHr} hr. and ${exitMn - entryMn} min.",
-                            style: TextStyle(
-                              color: Colors.green.shade900,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
+                    padding: const EdgeInsets.only(left: 5.0),
+                    child: Text(
+                      "Parked for: ${exitHr - entryHr} hr. and ${exitMn - entryMn} min.",
+                      style: TextStyle(
+                        color: Colors.green.shade900,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
                       : Container(
-                          height: 0.0,
-                          width: 0.0,
-                        ),
+                    height: 0.0,
+                    width: 0.0,
+                  ),
                 ],
               ),
             ),

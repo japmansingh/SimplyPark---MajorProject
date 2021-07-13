@@ -167,7 +167,7 @@ class _RecentLogsState extends State<RecentLogs> {
     return Scaffold(
         appBar: AppBar(
           title: Text('Recent Logs'),
-          backgroundColor: Color(0XFF003051),
+          backgroundColor: Colors.black,
           centerTitle: true,
         ),
         body: StreamBuilder(

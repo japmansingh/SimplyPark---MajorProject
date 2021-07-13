@@ -204,7 +204,8 @@ class _AddNumberPlateState extends State<AddNumberPlate> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Add Number Plate'),
-        backgroundColor: Color(0XFF003051),
+        // backgroundColor: Color(0XFF003051),
+        backgroundColor: Colors.black,
       ),
       body: SingleChildScrollView(
         physics: NeverScrollableScrollPhysics(),

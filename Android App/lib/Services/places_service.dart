@@ -3,6 +3,7 @@ import 'dart:convert' as convert;
 import 'package:minor_project/Models/place.dart';
 
 class PlacesService {
+  // final key = 'AIzaSyBaSIzjAQ2dq2QdwkSS2xP93wAXwmCmkFAsdsdawsd';
   final key = 'AIzaSyBaSIzjAQ2dq2QdwkSS2xP93wAXwmCmkFA';
 
   Future<List<Place>> getPlaces(double lat, double lng) async {

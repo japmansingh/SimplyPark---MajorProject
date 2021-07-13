@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\rzp_logo.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\51553087c3724306db546a0d1ea67182\\checkout-1.6.6\\res\\drawable-xhdpi-v4\\rzp_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\44b1706abe044cd42dcac5be863451ed\\core-1.1.0\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\63333801825fa8fbd9c7151e28fb5ce4\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
+    }
+]

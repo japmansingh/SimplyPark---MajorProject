@@ -20,7 +20,7 @@ class _DetailedNumPltSrnState extends State<DetailedNumPltSrn> {
     return Scaffold(
       appBar: AppBar(
         title: Text('${widget.data['numberPlateNumber']}'),
-        backgroundColor: Color(0XFF003051),
+        backgroundColor: Colors.black,
         centerTitle: true,
         actions: [
           IconButton(
@@ -434,7 +434,7 @@ class _DetailedNumPltSrnState extends State<DetailedNumPltSrn> {
           );
         },
         child: Icon(Icons.update),
-        backgroundColor: Color(0XFF003051),
+        backgroundColor: Colors.black,
       ),
     );
   }

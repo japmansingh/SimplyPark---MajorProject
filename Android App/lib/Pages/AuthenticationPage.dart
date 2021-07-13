@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:minor_project/Pages/Services.dart';
 import 'package:minor_project/Pages/create_account.dart';
 import 'package:custom_bottom_navigation_bar/custom_bottom_navigation_bar.dart';
 import 'package:custom_bottom_navigation_bar/custom_bottom_navigation_bar_item.dart';
@@ -24,6 +25,7 @@ final usersRef = FirebaseFirestore.instance.collection('users');
 final DateTime timestamp = DateTime.now();
 final GoogleSignIn googleSignIn = GoogleSignIn();
 final GoogleSignInAccount user = googleSignIn.currentUser;
+
 
 class _LoginState extends State<Login> {
   bool isAuth = false;
@@ -161,7 +163,15 @@ class _LoginState extends State<Login> {
                     height: 30,
                   ),
                   Text(
-                    'Simply Parking',
+                    '    Automated', textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    '    Parking',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
@@ -347,8 +357,10 @@ class _LoginState extends State<Login> {
   Scaffold homeScreen() {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0XFF003051),
-        title: Text("Simply Parking"),
+        //2F2F74
+        //003051
+        backgroundColor: Colors.black,
+        title: Text("Automated Parking"),
         centerTitle: true,
         actions: [
           Padding(
@@ -375,14 +387,16 @@ class _LoginState extends State<Login> {
           ParkingLocator(),
           Parking(),
           Logs(),
-          Profile(),
+          Services(),
         ],
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
+        backgroundColor: Colors.black,
+        itemBackgroudnColor: Colors.black,
         items: [
           CustomBottomNavigationBarItem(
             icon: Icons.location_on,
-            title: "Nearby Parkings",
+            title: "Nearby",
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.car_repair,
@@ -393,14 +407,15 @@ class _LoginState extends State<Login> {
             title: "Logs",
           ),
           CustomBottomNavigationBarItem(
-            icon: Icons.account_circle,
-            title: "Profile",
+            icon: Icons.home_repair_service,
+            title: "Services",
           ),
         ],
         onTap: (index) {
           _pageController.animateToPage(index,
               curve: Curves.fastLinearToSlowEaseIn,
-              duration: Duration(milliseconds: 600));
+              duration: Duration(milliseconds: 600),
+          );
         },
       ),
     );
@@ -423,7 +438,7 @@ class _LoginState extends State<Login> {
                 ),
                 onPressed: () => Navigator.of(context).pop(true)),
             FlatButton(
-                child: Text('No', style: TextStyle(color: Color(0XFF003051))),
+                child: Text('No', style: TextStyle(color: Colors.black)),
                 onPressed: () => Navigator.of(context).pop(false)),
           ],
         ),

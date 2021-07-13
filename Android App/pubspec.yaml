@@ -39,7 +39,7 @@ dependencies:
   flutter_launcher_icons : ^0.8.1
   flutter_masked_text: ^0.8.0
   font_awesome_flutter: ^8.10.0
-  razorpay_flutter: ^1.2.7
+  razorpay_flutter:
   toast:
   google_maps_flutter:
   geolocator:
@@ -48,6 +48,10 @@ dependencies:
   flutter_rating_bar:
   xml:
   cached_network_image:
+  uuid: ^2.0.0
+  timeago: ^2.0.17
+  circle_bottom_navigation:
+  stacked_card_carousel:
 
 dev_dependencies:
   flutter_test:

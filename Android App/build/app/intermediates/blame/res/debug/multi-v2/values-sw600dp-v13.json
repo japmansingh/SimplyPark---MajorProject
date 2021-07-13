@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\japne\\IdeaProjects\\MajorProject\\Android App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\japne\\.gradle\\caches\\transforms-2\\files-2.1\\60eb644c49763448d304c08464c1c26c\\checkout-1.6.10\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\c2ea1ee69efae0ac97172e917325ecfa\\checkout-1.6.8\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -132,6 +132,11 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text("Profile"),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Container(

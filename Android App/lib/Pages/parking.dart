@@ -235,7 +235,7 @@ class _ParkingState extends State<Parking> {
               MaterialPageRoute(builder: (context) => AddNumberPlate()));
         },
         child: Icon(Icons.add),
-        backgroundColor: Color(0XFF003051),
+        backgroundColor: Colors.black,
       ),
       body: StreamBuilder(
         stream:

@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\51553087c3724306db546a0d1ea67182\\checkout-1.6.6\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,93",
+                        "endLines": "2,13",
+                        "endColumns": "37,12",
+                        "endOffsets": "88,745"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\51553087c3724306db546a0d1ea67182\\checkout-1.6.6\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,93",
+                        "endLines": "2,13",
+                        "endColumns": "37,12",
+                        "endOffsets": "88,745"
+                    }
+                }
+            ]
+        }
+    ]
+}

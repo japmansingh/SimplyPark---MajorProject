@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\344dbd6f6b6ee4f465f7c226c1d71fb3\\play-services-auth-17.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\344dbd6f6b6ee4f465f7c226c1d71fb3\\play-services-auth-17.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jaskirat Singh\\AndroidStudioProjects\\Android App\\build\\razorpay_flutter\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\Jaskirat Singh\\.gradle\\caches\\transforms-2\\files-2.1\\344dbd6f6b6ee4f465f7c226c1d71fb3\\play-services-auth-17.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    }
+]

@@ -245,7 +245,7 @@ class _CreditCardPageState extends State<CreditCardPage> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        backgroundColor: Color(0XFF003051),
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Text("Credit Card"),
       ),

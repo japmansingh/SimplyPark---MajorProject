@@ -58,7 +58,7 @@ class _PaymentDoneState extends State<PaymentDone> {
     double height = MediaQuery.of(context).size.height / 2;
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Color(0XFF003051),
+            backgroundColor: Colors.black,
             automaticallyImplyLeading: false),
         body: Column(
           children: [
@@ -67,7 +67,7 @@ class _PaymentDoneState extends State<PaymentDone> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: SpinKitWave(
-                    color: Color(0XFF003051), type: SpinKitWaveType.start),
+                    color: Colors.black, type: SpinKitWaveType.start),
               ),
             ),
             Text("Processing your Payment in $_start seconds."),

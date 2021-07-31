@@ -7,12 +7,12 @@ app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-user_id = ''
+user_id = '104885248578748957962'
 
 # Japman - 104885248578748957962
 # Japneet - 102559740660975769254
 
-num_plt = ""
+num_plt = "HR26AC8489"
 
 # => returns user id to corresponding number plate
 docs = db.collection('number_plate').where(num_plt, '==', num_plt).limit(1).stream()
